@@ -8,11 +8,10 @@ function getRepo(repo) {
       if (response.status === 200) {
         return response.json();
       } else {
-        throw response.json();
+        throw response;
       }
     })
     .then(function (data) {
-      console.log(data);
       let name = data.name;
       let owner = data.owner.login;
       let owner_url = data.owner.html_url;
