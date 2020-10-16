@@ -139,6 +139,16 @@ for (i = 0; i < imgs.length; i++) {
   let img = imgs[i];
   img.addEventListener("click", () => {
     dimg.src = img.getElementsByTagName("img")[0].src;
-    modal.style.display = "flex";
+    modal.style.display = "block";
   });
 }
+
+const buttonRight = document.getElementById("slide-right");
+const buttonLeft = document.getElementById("slide-left");
+
+buttonRight.onclick = function () {
+  document.getElementById("gallery-pics").scrollLeft += 50;
+};
+buttonLeft.onclick = function () {
+  document.getElementById("gallery-pics").scrollLeft -= 50;
+};
