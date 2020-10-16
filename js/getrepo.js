@@ -138,7 +138,8 @@ let imgs = document.getElementsByClassName("gallery-image");
 for (i = 0; i < imgs.length; i++) {
   let img = imgs[i];
   img.addEventListener("click", () => {
-    dimg.src = img.getElementsByTagName("img")[0].src;
+    let src = img.getElementsByTagName("img")[0].src;
+    dimg.src = src.replace("-min", "");
     modal.style.display = "block";
   });
 }
